@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Intimates | Adult Wellness Store</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8f7;
+            color: #333;
+        }
+
+        header {
+            background: #45152f;
+            color: white;
+            padding: 22px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        nav {
+            background: #6c244b;
+            padding: 14px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px;
+            background: #f4dce8;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            color: #45152f;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            margin-bottom: 22px;
+        }
+
+        .hero button {
+            background: #45152f;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .products {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .products h2 {
+            margin-bottom: 30px;
+            color: #45152f;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .product {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        .product-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            margin-bottom: 10px;
+            color: #45152f;
+        }
+
+        .product p {
+            margin-bottom: 12px;
+            color: #666;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product button {
+            background: #6c244b;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product button:hover,
+        .hero button:hover {
+            background: #8e3766;
+        }
+
+        .notice {
+            text-align: center;
+            padding: 25px;
+            background: #f4dce8;
+            margin-top: 35px;
+        }
+
+        footer {
+            background: #45152f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Velvet Intimates</h1>
+        <p>Your Personal Wellness Boutique</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Discover Personal Wellness</h2>
+        <p>Explore thoughtfully selected products for
+           intimacy, comfort, and self-care.</p>
+        <button onclick="document.getElementById('products')
+            .scrollIntoView({behavior:'smooth'})">
+            Explore Products
+        </button>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Featured Products</h2>
+
+        <div class="product-grid">
+
+            <div class="product">
+                <div class="product-icon">💗</div>
+                <h3>Personal Massagers</h3>
+                <p>Designed for personal relaxation.</p>
+                <div class="price">₹1,499</div>
+                <button onclick="addToCart('Personal Massagers')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <div class="product-icon">🌸</div>
+                <h3>Intimate Care</h3>
+                <p>Gentle essentials for personal care.</p>
+                <div class="price">₹599</div>
+                <button onclick="addToCart('Intimate Care')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <div class="product-icon">🎁</div>
+                <h3>Couples Collection</h3>
+                <p>Explore products for shared experiences.</p>
+                <div class="price">₹1,999</div>
+                <button onclick="addToCart('Couples Collection')">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product">
+                <div class="product-icon">✨</div>
+                <h3>Wellness Accessories</h3>
+                <p>Accessories for your wellness routine.</p>
+                <div class="price">₹799</div>
+                <button onclick="addToCart('Wellness Accessories')">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="notice" id="about">
+        <h2>Private. Comfortable. Your Choice.</h2>
+        <p>We believe personal wellness deserves
+           thoughtful care and privacy.</p>
+        <p>For adults aged 18 and above.</p>
+    </section>
+
+    <footer id="contact">
+        <p>Contact: support@example.com</p>
+        <p>&copy; 2026 Velvet Intimates. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + " added to your cart!");
+        }
+    </script>
+
+</body>
+</html>
